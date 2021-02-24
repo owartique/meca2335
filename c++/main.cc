@@ -3,28 +3,20 @@
 *	RHex - Gr4
 */
 
-//#include "param.h"
-#include <iostream>
-#include <fstream>
+#include "param.h"
 
-using namespace std;
-
-#define NBR_POINTS 3000 // number of points in file
-
-double velocity[NBR_POINTS];
-
-int i = 0;
 
 int main(){
 
+	// Open file and save it into an array
 	ifstream myReadFile;
 	myReadFile.open("../log/output.txt");	
 	double output;
+	int i = 0;
 	if(myReadFile.is_open()){
 		while(!myReadFile.eof()){
 			myReadFile >> output;
-			//cout << output << endl;
-			velocity[i] = output;
+			v_normalized[i] = output;
 			i++;
 		}
 	}
