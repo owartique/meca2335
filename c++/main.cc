@@ -31,10 +31,6 @@ int main(){
 
 	myReadFile.close();
 
-	for(int i=0;i<NBR_POINTS;i++){
-		cout << velocity[i] << endl;
-	}
-
 	return 0;
 
 }
