@@ -19,7 +19,7 @@ int main(){
 	if(myReadFile.is_open()){
 		while(!myReadFile.eof()){
 			myReadFile >> output;
-			cout << output << cendl;
+			cout << output << endl;
 		}
 	}
 
