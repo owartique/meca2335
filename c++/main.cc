@@ -13,21 +13,27 @@ using namespace std;
 
 double velocity[NBR_POINTS];
 
-
+int i = 0;
 
 int main(){
 
 	ifstream myReadFile;
 	myReadFile.open("../log/output.txt");	
-	char output[100];
+	double output;
 	if(myReadFile.is_open()){
 		while(!myReadFile.eof()){
 			myReadFile >> output;
-			cout << output << endl;
+			//cout << output << endl;
+			velocity[i] = output;
+			i++;
 		}
 	}
 
 	myReadFile.close();
+
+	for(int i=0;i<NBR_POINTS;i++){
+		cout << velocity[i] << endl;
+	}
 
 	return 0;
 
