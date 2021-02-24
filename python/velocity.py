@@ -54,7 +54,7 @@ v_normalized = np.concatenate((s1_y,s2_y))
 v_normalized = np.concatenate((v_normalized,s3_y))
 
 # Save values to a txt file
-np.savetxt('output.txt',v_normalized)
+np.savetxt('../log/output.txt',v_normalized)
 
 # Plot
 plt.figure()
@@ -64,12 +64,3 @@ plt.xlabel("theta/pi")
 plt.ylabel("theta/pi")
 plt.grid(True)
 if plot : plt.show()
-
-
-
-
-
-
-
-
-

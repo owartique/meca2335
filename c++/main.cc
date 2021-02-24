@@ -9,6 +9,10 @@
 
 using namespace std;
 
+#define NBR_POINTS 3000 // number of points in file
+
+double velocity[NBR_POINTS];
+
 
 
 int main(){
