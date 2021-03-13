@@ -9,9 +9,9 @@ plot = True
 save2file = True
 
 # Velocity profile paramters issued from Fig. 2 of komsuoglu paper
-phi_s = 0.75	 # sweep angle [rad], ref = 0.75
-phi_0 = 0		 # leg offset [rad], ref = 0.35
-dc    = 0.3	     # duty cycle, ref = 0.3
+phi_s = 1.12	 # sweep angle [rad], ref = 0.75
+phi_0 = 0.2     # leg offset [rad], ref = 0.35
+dc    = 0.45	     # duty cycle, ref = 0.3
 
 # Velocity profile is divided in three segments
 # Coordinates of some useful points
@@ -31,6 +31,8 @@ dy = 1
 s1_A = (by-ay)/(bx-ax)
 s1_B = -s1_A*ax + ay
 
+print(s1_A)
+
 s1_x = np.linspace(ax,bx,1000)
 s1_y = s1_A*s1_x + s1_B
 
@@ -38,12 +40,16 @@ s1_y = s1_A*s1_x + s1_B
 s2_A = (cy-by)/(cx-bx)
 s2_B = -s2_A*bx + by
 
+print(s2_A)
+
 s2_x = np.linspace(bx,cx,1000)
 s2_y = s2_A*s2_x + s2_B
 
 # Segment 3 from c to d
 s3_A = (dy-cy)/(dx-cx)
 s3_B = -s3_A*cx + cy
+
+print(s3_A)
 
 s3_x = np.linspace(cx,dx,1000)
 s3_y = s3_A*s3_x + s3_B
